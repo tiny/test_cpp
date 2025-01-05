@@ -116,6 +116,7 @@ void Foo::print()
   std::cout << std::endl;
 } // Foo::print
 
+<<<<<<< HEAD
 int Foo::set(int a)
 {
   if ((a < 0) || (a > 10))
