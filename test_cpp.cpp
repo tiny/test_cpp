@@ -726,6 +726,12 @@ void process_strings()
   }
   auto p4 = std::chrono::high_resolution_clock::now() ;
 
+  // Get the resolution of high_resolution_clock
+  auto resolution = std::chrono::high_resolution_clock::period::num / 
+                    static_cast<double>(std::chrono::high_resolution_clock::period::den);
+
+  std::cout << "Resolution of high_resolution_clock: " << resolution << " seconds" << std::endl;
+
   printf( "time to produce random block: %ld ns \n", (p2-p1).count() ) ;
   printf( "time to produce random strings: %ld ns \n", (p3-p2).count() ) ;
   printf( "time to calculate average string length: %ld ns \n", (p4-p3).count() ) ;
